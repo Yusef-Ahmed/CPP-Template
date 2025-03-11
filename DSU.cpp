@@ -9,9 +9,8 @@ struct DSU {
     }
 
     int find_leader(int i) {
-        if (parent[i] == i) {
-            return i;
-        }
+        if (parent[i] == i) return i;
+
         return parent[i] = find_leader(parent[i]);
     }
 
@@ -25,9 +24,9 @@ struct DSU {
         int leader1 = find_leader(x),
             leader2 = find_leader(y);
 
-        if(leader1==leader2) return;
+        if (leader1==leader2) return;
 
-        if(groupsize[leader2] > groupsize[leader1]) {
+        if (groupsize[leader2] > groupsize[leader1]) {
             swap(leader1, leader2);
         }
 
