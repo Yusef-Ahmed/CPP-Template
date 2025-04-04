@@ -1,9 +1,13 @@
+// #define ll long long
+
 const int len = 20;
 int pw[len];
+
 void pre() {
     pw[0] = 1;
     for(int i = 1; i < len; i++) pw[i] = 2 * pw[i - 1];
 }
+
 vector<bool> binRep(int n) {
     vector<bool> v(len);
     for (int i = 0; i < len; i++){
@@ -17,6 +21,7 @@ struct Node {
     int cnt;
     Node *ptr[2];
 };
+
 struct BinTrie {
     Node *root;
 
@@ -70,7 +75,8 @@ struct BinTrie {
         return ans;
     }
 }; /// 1-DON'T repeat, 2-pre, 3-len.
-int check(ll n) { // #define ll long long
+
+int check(ll n) {
     int cnt = 0;
     while(n) n /= 2, cnt++;
     return cnt;

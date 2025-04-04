@@ -1,11 +1,15 @@
 // #define pii pair<int, int>
-vector<pair<int, pii>> adj;
-int n, m;
 // #define ll long long
-ll mn = oo; // oo = 0x3f3f3f3f
+// #define F first
+// #define S second
+// const int oo = 0x3f3f3f3f;
+
+int n, m;
+vector<pair<int, pii>> adj;
+ll mn = oo; 
 ll dis[N];
 
-int bellman(){
+int bellman() {
     for (int i = 0; i < n; i++) {
         for (auto j: adj){
             int from = j.F, to = j.S.F, w = j.S.S;

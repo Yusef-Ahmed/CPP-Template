@@ -6,7 +6,7 @@ vector<int> ans(N, -1);
 priority_queue<pii, vector<pii>, greater<pii>> s;
 
 void dijkstra(int i){
-    s.push({0, i});/// {total cost,node}
+    s.push({0, i}); // {totalCost, node}
     while (!s.empty()){
         pii p = s.top(); s.pop();
         int node = p.S, nodecost = p.F;

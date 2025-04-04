@@ -1,6 +1,8 @@
+// #define pii pair<int,int>
+
 vector<vector<int>> v, bridgeTree;
 vector<int> low, dfn, comp;
-set<pii> bridges; // #define pii pair<int,int>
+set<pii> bridges;
 vector<bool> vis;
 int ndfn;
 
@@ -36,7 +38,7 @@ void scc(int n) {
 void dfs(int i, int &cnt) {
     vis[i] = 1;
     comp[i] = cnt;
-    for (int x : v[i]) if (!vis[x] && !bridges.count({min(i, x), max(i, x)})) {
+    for (int x: v[i]) if (!vis[x] && !bridges.count({min(i, x), max(i, x)})) {
         dfs(x, cnt);
     }
 }
