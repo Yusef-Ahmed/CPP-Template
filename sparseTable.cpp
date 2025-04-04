@@ -1,10 +1,12 @@
+// const int N = 1e5 + 9;
+
 int n, arr[N];
 
 struct sparseTable {
     int table[N][20], logTwo[N];
 
     int merge(int u, int v) {
-        return max(u,v);
+        return max(u, v);
     }
 
     void build() {
