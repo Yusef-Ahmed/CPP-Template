@@ -20,7 +20,7 @@ vector<int> zAlgo(string s) {
 }
 
 void solve () {
-    vector<int> fail = z_algo(s), ans(n + 1, 1);
+    vector<int> fail = zAlgo(s), ans(n + 1, 1);
     for (int i = 0; i < n; i++) {
         ans[fail[i]]++;
     }
